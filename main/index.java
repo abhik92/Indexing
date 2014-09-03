@@ -86,12 +86,34 @@ public class index {
 		
 		// choose pivots
 		// has to be done better
+		
+		//remove for non sampling
+		int maxsize=Math.max(PIVOT_SIZE_TOTAL,(int)(0.01*head.list_objects.size()));
+		ArrayList<Integer> num= new ArrayList<Integer>();			
+		for(int k=0;k<maxsize;k++){
+			int l=r.nextInt(head.list_objects.size());
+			while(num.contains(l)){
+				l=r.nextInt(head.list_objects.size());
+			}
+			num.add(l);
+		}	
+		
+		
+		
+		
 		for(int i=0;i<PIVOT_SIZE_TOTAL;i++){			
 			//choose random
 			//int j=r.nextInt(head.list_objects.size());
 			
 			//choose far away points
-			int j=get_farthest(head.list_objects,pivot_lst);
+			
+			
+			int j=get_farthest_sampling(head.list_objects,pivot_lst,num);
+			
+		
+			//without sampling
+			//int j=get_farthest(head.list_objects,pivot_lst);
+			
 			
 			
 			/*then the same*/
@@ -124,6 +146,41 @@ public class index {
 	 */
 	private int get_farthest(ArrayList<finger_print> list_objects,
 			ArrayList<node> pivot_lst) {
+		
+		Random r= new Random();
+		if(pivot_lst.size()==0){
+				// can we do something here.
+				return r.nextInt(list_objects.size());
+		}		
+		
+		int indx=0;
+		double max_dist= Double.MIN_VALUE;
+		for(int i=0;i<list_objects.size();i++){
+				double lst_min=Double.MAX_VALUE;
+				for(int j=0;j<pivot_lst.size();j++){
+					if(list_objects.get(i).getDistance(pivot_lst.get(j).pivot) < lst_min){
+						lst_min=list_objects.get(i).getDistance(pivot_lst.get(j).pivot);
+					}
+				}
+				if(lst_min >max_dist){
+					max_dist=lst_min;
+					indx=i;
+				}
+		}
+		
+		return indx;
+	}
+
+	
+	
+
+	/*
+	 * 
+	 * Does something similar to what is done in CUre
+	 * But with sampling
+	 */
+	private int get_farthest_sampling(ArrayList<finger_print> list_objects,
+			ArrayList<node> pivot_lst, ArrayList<Integer> num) {
 		
 		Random r= new Random();
 		if(pivot_lst.size()==0){
