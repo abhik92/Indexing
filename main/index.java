@@ -46,7 +46,7 @@ public class index {
 		}			
 		
 		
-		/*uncomment
+		
 		// calls make_pivot with outliers (oultiers are basically what is left at each stage)
 		make_pivot(outliers);
 		int i;
@@ -55,13 +55,11 @@ public class index {
 		}
 			final_pivot_list.get(i).next=null;
 		
-		*/
 		
+		/*new uncomment */	
 		
-		/*new*/	
-		
-		head=new node(outliers);
-		make_pivot_hier(head);
+		//head=new node(outliers);
+		//make_pivot_hier(head);
 		
 		
 		/**/
@@ -95,6 +93,8 @@ public class index {
 			//choose far away points
 			int j=get_farthest(head.list_objects,pivot_lst);
 			
+			
+			/*then the same*/
 			pivot_lst.add(new node(head.list_objects.get(j)));
 			head.list_objects.remove(j);	
 		}
@@ -117,7 +117,11 @@ public class index {
 	}	
 	
 	
-	
+	/*
+	 * 
+	 * Does something similar to what is done in CUre
+	 * 
+	 */
 	private int get_farthest(ArrayList<finger_print> list_objects,
 			ArrayList<node> pivot_lst) {
 		

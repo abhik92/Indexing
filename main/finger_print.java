@@ -11,7 +11,8 @@ public class finger_print implements Comparable<finger_print>{
 	HashMap<Integer, Integer> feature_map;
 	String line;
 	int comparisons;
-	
+	static ArrayList<Integer> f_values=new ArrayList<Integer>();
+	static ArrayList<Integer> f_valin=new ArrayList<Integer>();
 	//initialize the data item
 	public finger_print(int id_num) {
 		id=id_num;
@@ -27,9 +28,14 @@ public class finger_print implements Comparable<finger_print>{
 	
 	//add all features in string format
 	public void add_all_features(String[] features_string){
+		f_valin.add(features_string.length);
 		for(int i=0;i<features_string.length;i++){
 			String[] feature_parsed= features_string[i].replace(":", " ").trim().split("\\s+");
 			int f_id= Integer.parseInt(feature_parsed[0]);
+				if(!f_values.contains(f_id)){
+					f_values.add(f_id);
+				}
+			
 			int f_val= Integer.parseInt(feature_parsed[1]);
 			feature_map.put(f_id, f_val);
 		}

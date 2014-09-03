@@ -27,6 +27,10 @@ public class read_file {
 			fp.add_all_features(features_list);
 			data.data_set.put(count, fp);
 		}
+		System.out.println(finger_print.f_values.size());
+		ArrayList<Integer> x=finger_print.f_values;
+		System.out.println(finger_print.f_valin.size());
+		ArrayList<Integer> y=finger_print.f_valin;
 		
 		size=count;
 		
@@ -66,7 +70,10 @@ public class read_file {
 		for(int i=1;i<=testdata.data_set.size();i++){
 				
 			ArrayList<finger_print> f= new ArrayList<finger_print>();
-			indx.range_finger_algo2(testdata.data_set.get(i), dis, indx.head, f);	
+			//indx.range_finger_algo2(testdata.data_set.get(i), dis, indx.head, f);	
+			
+			f=indx.range_finger(testdata.data_set.get(i), dis);	
+			
 			//finger_print f=indx.closest_finger(testdata.data_set.get(i));	
 			//System.out.println(f.size());			
 			//indexed.add(f.size());
