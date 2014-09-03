@@ -190,16 +190,16 @@ public class index {
 		
 		int indx=0;
 		double max_dist= Double.MIN_VALUE;
-		for(int i=0;i<list_objects.size();i++){
+		for(int i=0;i<num.size();i++){
 				double lst_min=Double.MAX_VALUE;
 				for(int j=0;j<pivot_lst.size();j++){
-					if(list_objects.get(i).getDistance(pivot_lst.get(j).pivot) < lst_min){
-						lst_min=list_objects.get(i).getDistance(pivot_lst.get(j).pivot);
+					if(list_objects.get(num.get(i)).getDistance(pivot_lst.get(j).pivot) < lst_min){
+						lst_min=list_objects.get(num.get(i)).getDistance(pivot_lst.get(j).pivot);
 					}
 				}
 				if(lst_min >max_dist){
 					max_dist=lst_min;
-					indx=i;
+					indx=num.get(i);
 				}
 		}
 		
