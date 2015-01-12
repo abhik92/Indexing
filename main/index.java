@@ -88,7 +88,7 @@ public class index {
 		// has to be done better
 		
 		//remove for non sampling
-		int maxsize=Math.max(PIVOT_SIZE_TOTAL,(int)(0.01*head.list_objects.size()));
+		int maxsize=Math.max(PIVOT_SIZE_TOTAL,(int)(0.001*head.list_objects.size()));
 		ArrayList<Integer> num= new ArrayList<Integer>();			
 		for(int k=0;k<maxsize;k++){
 			int l=r.nextInt(head.list_objects.size());

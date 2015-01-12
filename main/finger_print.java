@@ -8,7 +8,7 @@ public class finger_print implements Comparable<finger_print>{
 	int id;
 	double sim_closest_pivot;
 	node closest_pivot;
-	HashMap<Integer, Integer> feature_map;
+	HashMap<Integer, Double> feature_map;
 	String line;
 	int comparisons;
 	static ArrayList<Integer> f_values=new ArrayList<Integer>();
@@ -16,13 +16,13 @@ public class finger_print implements Comparable<finger_print>{
 	//initialize the data item
 	public finger_print(int id_num) {
 		id=id_num;
-		feature_map= new HashMap<Integer, Integer>();
+		feature_map= new HashMap<Integer, Double>();
 		sim_closest_pivot=-1;
 		comparisons=0;
 	}
 
 	//add feature values
-	public void add_feature(int feature_id, int feature_value){
+	public void add_feature(int feature_id, double feature_value){
 		feature_map.put(feature_id, feature_value);
 	}
 	
@@ -36,7 +36,7 @@ public class finger_print implements Comparable<finger_print>{
 					f_values.add(f_id);
 				}
 			
-			int f_val= Integer.parseInt(feature_parsed[1]);
+			double f_val= Double.parseDouble(feature_parsed[1]);
 			feature_map.put(f_id, f_val);
 		}
 	}
@@ -46,8 +46,13 @@ public class finger_print implements Comparable<finger_print>{
 	 *
 	 */
 	public double getSimilarity(finger_print fp){
-		return this.getTanimotoSimilarity(fp);		
-		//return 1.0/getL2Distance(fp);
+		//return this.getTanimotoSimilarity(fp);		
+		
+		
+		//return 1.0- getL2Distance(fp);
+		
+		return 1 -  (1.0*getL1Distance(fp) / 514);
+				
 	}
 	
 	
@@ -85,8 +90,43 @@ public class finger_print implements Comparable<finger_print>{
 		}
 		return Math.sqrt(score);		
 	}
-	
-	
+	public double getL1Distance(finger_print fp){
+		double score=0;		
+		for(Integer key : this.feature_map.keySet()){
+			if(fp.feature_map.containsKey(key)){
+				score+=Math.pow(this.feature_map.get(key)-fp.feature_map.get(key), 1);
+			}
+			else 
+				score+=Math.pow(this.feature_map.get(key), 1);			
+		}
+		for(Integer key : fp.feature_map.keySet()){
+			if(!this.feature_map.containsKey(key)){
+				score+=Math.pow(fp.feature_map.get(key), 1);
+			}
+		}
+		return score;		
+	}
+	public double getLinfDistance(finger_print fp){
+		double score=0;		
+		double max=0;
+		for(Integer key : this.feature_map.keySet()){
+			if(fp.feature_map.containsKey(key)){
+				score=Math.pow(this.feature_map.get(key)-fp.feature_map.get(key), 1);
+				if(score >max) max=score;
+			}
+			else {
+				score=Math.pow(this.feature_map.get(key), 1);			
+				if(score >max) max=score;
+			}
+		}
+		for(Integer key : fp.feature_map.keySet()){
+			if(!this.feature_map.containsKey(key)){
+				score=Math.pow(fp.feature_map.get(key), 1);
+				if(score >max) max=score;	
+			}
+		}
+		return max;		
+	}
 	public double getDistance(finger_print fp){
 		
 		//return getL2Distance(fp);
@@ -147,11 +187,11 @@ public class finger_print implements Comparable<finger_print>{
 		this.closest_pivot = closest_pivot;
 	}
 
-	public HashMap<Integer, Integer> getFeature_map() {
+	public HashMap<Integer, Double> getFeature_map() {
 		return feature_map;
 	}
 
-	public void setFeature_map(HashMap<Integer, Integer> feature_map) {
+	public void setFeature_map(HashMap<Integer, Double> feature_map) {
 		this.feature_map = feature_map;
 	}
 		
