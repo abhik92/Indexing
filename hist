@@ -1,0 +1,1000 @@
+ 1009  vim  lshash_Main.py 
+ 1010  python lshash_Main.py imMain.txt 4 1000
+ 1011  vim  lshash_Main.py 
+ 1012  python lshash_Main.py imMain.txt 4 1000
+ 1013  vim  lshash_Main.py 
+ 1014  python lshash_Main.py imMain.txt 4 1000 10
+ 1015  python lshash_Main.py imMain.txt 4 1000 20
+ 1016  python lshash_Main.py imMain.txt 4 1000 5
+ 1017  vim  lshash_Main.py 
+ 1018  python lshash_Main.py imMain.txt 4 1000 5
+ 1019  python lshash_Main.py imMain.txt 4 1000 10
+ 1020  vim  lshash_Main.py 
+ 1021  python lshash_Main.py imMain.txt 4 1000 100
+ 1022  python lshash_Main.py imMain.txt 4 1000 50
+ 1023  python lshash_Main.py imMain.txt 4 1000 25
+ 1024  python lshash_Main.py imMain.txt 128 1000000 25
+ 1025  cd CS6740/Assgn2/
+ 1026  ls
+ 1027  vim lshash_Main.py 
+ 1028  python lshash_Main.py imMain_pca_32.txt 4 1000
+ 1029  python lshash_Main.py imMain_pca_32.txt 4 1000 10
+ 1030  python lshash_Main.py imMain_pca_32.txt 4 1000 25
+ 1031  python lshash_Main.py imMain_pca_32.txt 4 10000 10
+ 1032  python lshash_Main.py imMain_pca_32.txt 4 10000 100
+ 1033  python lshash_Main.py imMain_pca_32.txt 4 10000 50
+ 1034  python lshash_Main.py imMain_pca_32.txt 4 10000 25
+ 1035  python lshash_Main.py imMain_pca_32.txt 4 10000 20
+ 1036  python lshash_Main.py imMain_pca_32.txt 4 10000 20 5
+ 1037  python lshash_Main.py imMain_pca_32.txt 4 10000 20 10
+ 1038  python lshash_Main.py imMain_pca_32.txt 4 10000 200 10
+ 1039  python lshash_Main.py imMain_pca_32.txt 4 10000 100  10
+ 1040  python lshash_Main.py imMain_pca_32.txt 4 10000 10 5
+ 1041  python lshash_Main.py imMain_pca_32.txt 4 10000 25 5
+ 1042  python lshash_Main.py imMain_pca_32.txt 4 10000 50 5
+ 1043  python lshash_Main.py imMain_pca_32.txt 4 10000 75 5
+ 1044  python lshash_Main.py imMain_pca_32.txt 4 10000 75 2
+ 1045  python lshash_Main.py imMain_pca_32.txt 4 10000 75 5
+ 1046  python lshash_Main.py imMain_pca_32.txt 4 10000 100 5
+ 1047  python lshash_Main.py imMain_pca_32.txt 4 10000 50 5
+ 1048  python lshash_Main.py imMain_pca_32.txt 4 1000000 50 5
+ 1049  python lshash_Main.py imMain_pca_32.txt 4 1000000 50 10
+ 1050  python lshash_Main.py imMain_pca_32.txt 4 10000 20 10
+ 1051  python lshash_Main.py imMain_pca_32.txt 4 10000 20 2
+ 1052  ls
+ 1053  cd CS6740/Assgn2/
+ 1054  ls
+ 1055  cd HW_2/
+ 1056  ls
+ 1057  cd CS6740/
+ 1058  ls
+ 1059  cd Assgn2/
+ 1060  ls
+ 1061  scp  kdtree.py lshash_Main.py run.sh runkd.sh abhik@10.22.12.136:. 
+ 1062  scp kdtree.py lshash_Main.py run.sh runkd.sh abhik@10.22.12.136:. 
+ 1063  ls
+ 1064  mkdir code
+ 1065  cp -r kdtree.py lshash_Main.py runkd.sh run.sh code/
+ 1066  cd ..
+ 1067  ls
+ 1068  cd ..
+ 1069  ls
+ 1070  cd Downloads/
+ 1071  cd fastmap/
+ 1072  ls
+ 1073  cd ../
+ 1074  ls
+ 1075  cd DDP/CS6740/
+ 1076  cd src/
+ 1077  ls
+ 1078  cd Assgn2/
+ 1079  cd ..
+ 1080  ls
+ 1081  cd ..
+ 1082  ls
+ 1083  vim run.sh 
+ 1084  ls
+ 1085  cd Desktop/
+ 1086  ls
+ 1087  cd Prep/
+ 1088  ls
+ 1089  cd CodeJam/
+ 1090  ls
+ 1091  cd DDP/Dataset/
+ 1092  ls
+ 1093  head - 20 fingerprints.pathfp 
+ 1094  cd ../L2Similarity/files/
+ 1095  ls
+ 1096  ls -l
+ 1097  head -20 indexdata
+ 1098  head -1 indexdata
+ 1099  vim  lshash_Main.py 
+ 1100  python lshash_Main.py imMain.txt 128 1000000 25
+ 1101  vim  lshash_Main.py 
+ 1102  ls
+ 1103  vim runkd.sh
+ 1104  vim  lshash_Main.py 
+ 1105  vim runkd.sh
+ 1106  mkdir outlsh
+ 1107  vim runkd.sh 
+ 1108  python lshash_Main.py imMain.txt 32 100 100 5
+ 1109  python lshash_Main.py imMain.txt 32 1000 100 5
+ 1110  vim  lshash_Main.py 
+ 1111  python lshash_Main.py imMain.txt 32 1000 100 5
+ 1112  vim  lshash_Main.py 
+ 1113  python lshash_Main.py imMain.txt 32 1000 100 5
+ 1114  python lshash_Main.py imMain.txt 32 1000 50 5
+ 1115  vim  lshash_Main.py 
+ 1116  python lshash_Main.py imMain_pca_32.txt 4 1000 50 5
+ 1117  python lshash_Main.py imMain.txt 128 1000 50 5
+ 1118  python lshash_Main.py imMain.txt 128 1000 20 5
+ 1119  python lshash_Main.py imMain_pca_32.txt 32 1000 50 5
+ 1120  python lshash_Main.py imMain_pca_32.txt 32 1000 20 5
+ 1121  python lshash_Main.py imMain_pca_32.txt 16 1000 20 5
+ 1122  python lshash_Main.py imMain_pca_32.txt 4 1000 20 5
+ 1123  vim  runkd.sh 
+ 1124  python lshash_Main.py imMainfm_32.txt 4 1000 20 5
+ 1125  python lshash_Main.py imMain_fm_32.txt 4 1000 20 5
+ 1126  screen -r
+ 1127  ls -l outlsh/
+ 1128  screen -r
+ 1129  vim  runkd.sh 
+ 1130  screen -r
+ 1131  ls -l outlsh/
+ 1132  screen -r
+ 1133  ls -l outlsh/
+ 1134  screen -r
+ 1135  ls -l outlsh/
+ 1136  cat *
+ 1137  cd outlsh/
+ 1138  ls
+ 1139  cat *
+ 1140  cd ..
+ 1141  vim lshash_Main.py 
+ 1142  vim runkd.sh 
+ 1143  cd outlsh/
+ 1144  ls
+ 1145  cat pc32_1m 
+ 1146  cat pc32_100k
+ 1147  cat pc16_1m 
+ 1148  cat pc8_1m 
+ 1149  cat pc4_1m 
+ 1150  vim run.sh 
+ 1151  source run.sh 
+ 1152  top
+ 1153  ls
+ 1154  vim run.sh 
+ 1155  make
+ 1156  screen -r
+ 1157  source run.sh 
+ 1158  ls
+ 1159  cd ../../CS6740/Assgn2/
+ 1160  ;S
+ 1161  LS
+ 1162  ls
+ 1163  source runkd.sh 
+ 1164  source run.sh 
+ 1165  source runkd.sh 
+ 1166  sudo passwd jithin
+ 1167  cd Desktop/
+ 1168  mkdir jithin
+ 1169  cd jithin/
+ 1170  pwd
+ 1171  ls
+ 1172  cd DDP/L2Similarity/
+ 1173  ls
+ 1174  cd src/
+ 1175  ls
+ 1176  cd main/
+ 1177  ls
+ 1178  vim read_file.java 
+ 1179  ls
+ 1180  cd Desktop/jithin/
+ 1181  ls
+ 1182  ls -l
+ 1183  cat data_1 
+ 1184  cd Desktop/jithin/
+ 1185  head -20 data_1 
+ 1186  cd 
+ 1187  cd DDP/L2Similarity/src/main/
+ 1188  vim read_file.java 
+ 1189  vim finger_print.java 
+ 1190  vim read_file.java 
+ 1191  exit
+ 1192  cd DDP/L2Similarity/
+ 1193  cd src/
+ 1194  ls
+ 1195  cd main/
+ 1196  ls
+ 1197  vim read_file.java 
+ 1198  vim index.java 
+ 1199  vim finger_print.java 
+ 1200  ls
+ 1201  cd ../../
+ 1202  ls
+ 1203  make
+ 1204  ls -l
+ 1205  rm *.log
+ 1206  ls
+ 1207  ls -l
+ 1208  vim run.sh 
+ 1209  java -cp bin main.read_file indexdata10000 100 100 0.3
+ 1210  java -cp bin main.read_file indexdata1000 50 50 0.3
+ 1211  vim src/main/index.java 
+ 1212  vim src/main/read_file.java 
+ 1213  make
+ 1214  java -cp bin main.read_file indexdata1000 50 50 0.3
+ 1215  vim src/main/read_file.java 
+ 1216  cd
+ 1217  cd Desktop/jithin/
+ 1218  ls
+ 1219  sort -R data_1 | head -n 1000 > data_r_100
+ 1220  ls -l
+ 1221  rm data_r_100*
+ 1222  ls
+ 1223  head -10000 data_1 >  data_10k
+ 1224  head -1000 data_1 >  data_1k
+ 1225  cd
+ 1226  cd DDP/L2Similarity/src/main/
+ 1227  cd ../../
+ 1228  vim src/main/read_file.java 
+ 1229  make
+ 1230  java -cp bin main.read_file ../../Desktop/jithin/data_1k 50 50 0.3
+ 1231  cp ../../Desktop/jithin/data_1k files/
+ 1232  ls files/
+ 1233  java -cp bin main.read_file ../../Desktop/jithin/data_1k 50 50 0.3
+ 1234  java -cp bin main.read_file data_1k 50 50 0.3
+ 1235  cp ../../Desktop/jithin/data_10k files/
+ 1236  java -cp bin main.read_file data_10k 100 100 0.3
+ 1237  vim src/main/read_file.java 
+ 1238  make
+ 1239  java -cp bin main.read_file data_10k 100 100 0.3
+ 1240  cd DDP/L2Similarity/
+ 1241  java -cp bin main.read_file data_10k 100 100 0.3
+ 1242  make
+ 1243  %
+ 1244  java -cp bin main.read_file data_1k 100 100 0.3
+ 1245  make
+ 1246  java -cp bin main.read_file data_1k 100 100 0.3
+ 1247  make
+ 1248  java -cp bin main.read_file data_1k 100 100 0.3
+ 1249  java -cp bin main.read_file data_1 100 100 0.3
+ 1250  java -cp bin main.read_file data_1 10 10 0.3
+ 1251  make
+ 1252  java -cp bin main.read_file data_1 10 10 0.3
+ 1253  java -cp bin main.read_file indexdata1000 10 10 0.3
+ 1254  make
+ 1255  java -cp bin main.read_file indexdata1000 10 10 0.3
+ 1256  make
+ 1257  java -cp bin main.read_file indexdata1000 10 10 0.3
+ 1258  %
+ 1259  make
+ 1260  java -cp bin main.read_file indexdata1000 10 10 0.3
+ 1261  head -10 data_1 >  data_new_test
+ 1262  head -10 files/data_1 >  files/data_new_test
+ 1263  head -10 files/indexdata >  files/data_old_test_10
+ 1264  head -10 files/indexdata >  files/data_old_test
+ 1265  make
+ 1266  java -cp bin main.read_file indexdata1000 10 10 0.3
+ 1267  make
+ 1268  java -cp bin main.read_file indexdata1000 10 10 0.3
+ 1269  make
+ 1270  java -cp bin main.read_file indexdata1000 10 10 0.3
+ 1271  make
+ 1272  java -cp bin main.read_file indexdata1000 10 10 0.3
+ 1273  java -cp bin main.read_file data_1k 10 10 0.3
+ 1274  make
+ 1275  java -cp bin main.read_file data_1k 10 10 0.3
+ 1276  java -cp bin main.read_file data_1k 10 10 0.1
+ 1277  java -cp bin main.read_file data_1k 50 50 0.3
+ 1278  make
+ 1279  java -cp bin main.read_file data_1k 10 10 0.3
+ 1280  make
+ 1281  java -cp bin main.read_file data_1k 10 10 0.3
+ 1282  java -cp bin main.read_file data_1k 10 10 0.1
+ 1283  java -cp bin main.read_file data_1k 10 10 0.9
+ 1284  ls
+ 1285  cd CS6740/
+ 1286  ls
+ 1287  cd ../Desktop/
+ 1288  find *.tex
+ 1289  cd
+ 1290  find -r *.tex
+ 1291  find -R *.tex
+ 1292  find --name *.tex
+ 1293  find -name *.tex
+ 1294  cd DDP/
+ 1295  ls
+ 1296  cd CS6740/
+ 1297  ls
+ 1298  cd ../Desktop/
+ 1299  cd ../DDP/Baseline/
+ 1300  ls
+ 1301  ls -l
+ 1302  find -name report_Midterm.pdf
+ 1303  top
+ 1304  clear
+ 1305  wget http://download.osgeo.org/libspatialindex/spatialindex-src-1.8.0.tar.gz
+ 1306  tar xzvf spatialindex-src-1.8.0.tar.gz
+ 1307  cd spatialindex-src-1.8.0
+ 1308  ./configure 
+ 1309  make
+ 1310  sudo make install
+ 1311  pip install rtree
+ 1312  sudo ldconfig
+ 1313  pip install rtree
+ 1314  python
+ 1315  pip install rtree
+ 1316  pip --upgrade rtree
+ 1317  python
+ 1318  ls
+ 1319  cd
+ 1320  ls
+ 1321  cd CS6740/Assgn2/
+ 1322  ls
+ 1323  cd HW_2/
+ 1324  ls
+ 1325  cd ..
+ 1326  head -10  imMain.txt 
+ 1327  head -10  imMain_pca_32.txt 
+ 1328  ls
+ 1329  vim kdtree.py
+ 1330  head -10  imMain.txt 
+ 1331  head -10  imMain_32.txt 
+ 1332  ls
+ 1333  cd code/
+ 1334  ls
+ 1335  cd ..
+ 1336  cd ../
+ 1337  ls
+ 1338  cd ..
+ 1339  ls
+ 1340  cd Downloads/fastmap/data/
+ 1341  ls
+ 1342  cd ../fast_map/
+ 1343  ;s
+ 1344  ls
+ 1345  cd ..
+ 1346  cd CS6740/Assgn2/
+ 1347  ;s
+ 1348  ls
+ 1349  cd ../
+ 1350  mkdir Assgn3
+ 1351  ls
+ 1352  cp Assgn2/imMain_32.txt Assgn3/
+ 1353  cp Assgn2/kdtree.py Assgn3/
+ 1354  ls
+ 1355  cd Assgn3/
+ 1356  ;s
+ 1357  ls
+ 1358  cp kdtree.py rtree.py
+ 1359  rm kdtree.py 
+ 1360  vim rtree.py 
+ 1361  python rtree.py imMain_32.txt 16
+ 1362  vim rtree.py 
+ 1363  python rtree.py imMain_32.txt 16
+ 1364  vim rtree.py 
+ 1365  python rtree.py imMain_32.txt 16
+ 1366  vim rtree.py 
+ 1367  python rtree.py imMain_32.txt 16
+ 1368  vim rtree.py 
+ 1369  python
+ 1370  pythom
+ 1371  python
+ 1372  cd
+ 1373  python
+ 1374  ls
+ 1375  cd CS6740/Assgn3/
+ 1376  python
+ 1377  cd
+ 1378  cp -r CS6740/Assgn3/ .
+ 1379  ls
+ 1380  rm Assgn3/
+ 1381  cp Assgn3/imMain_32.txt Assgn3/rtree.py .
+ 1382  ls
+ 1383  python rtree.py imMain_32.txt 16
+ 1384  vim rtree.py
+ 1385  python rtree.py imMain_32.txt 16
+ 1386  vim rtree.py
+ 1387  cd CS6740/Assgn3/
+ 1388  ls
+ 1389  vim ../Assgn2/kdtree.py 
+ 1390  vim ../Assgn2/code/lshash_Main.py 
+ 1391  ls
+ 1392  rm rtree.pyc 
+ 1393  ;s
+ 1394  ls
+ 1395  cd
+ 1396  ;s
+ 1397  ls
+ 1398  cd spatialindex-src-1.8.0/
+ 1399  ;s
+ 1400  ls
+ 1401  find -name index
+ 1402  find -r -name index
+ 1403  find -R -name index
+ 1404  find  index
+ 1405  cd include/
+ 1406  ls
+ 1407  cd spatialindex/
+ 1408  ls
+ 1409  cd
+ 1410  cd CS6740/Assgn3/
+ 1411  ls
+ 1412  python rtree.py imMain_32.txt 16
+ 1413  python
+ 1414  cd
+ 1415  vim rtree.py
+ 1416  python
+ 1417  python rtree.py imMain_32.txt 16
+ 1418  exit
+ 1419  python rtree.py imMain_32.txt 16
+ 1420  python
+ 1421  ls
+ 1422  rm rtree.pyc
+ 1423  python rtree.py imMain_32.txt 16
+ 1424  ls
+ 1425  rm rtree.pyc
+ 1426  ls
+ 1427  python
+ 1428  ls
+ 1429  rm rtree.pyc 
+ 1430  find index.py
+ 1431  find -name index.py
+ 1432  cd spatialindex-src-1.8.0/
+ 1433  ls
+ 1434  make
+ 1435  make install
+ 1436  sudo make install
+ 1437  python3
+ 1438  python
+ 1439  ls
+ 1440  cd
+ 1441  python
+ 1442  rm rtree.pyc 
+ 1443  python
+ 1444  cp rtree.py rt.py
+ 1445  rm rtree.py
+ 1446  python rtr.py imMain_32.txt 16
+ 1447  python rt.py imMain_32.txt 16
+ 1448  ls
+ 1449  rm rtree.pyc 
+ 1450  python rt.py imMain_32.txt 16
+ 1451  cd CS6740/Assgn3/
+ 1452  ls
+ 1453  cp rtree.py rt.py
+ 1454  rm rtree.py
+ 1455  rm rtree.pyc 
+ 1456  python rt.py imMain_32.txt 16
+ 1457  vim rt.py 
+ 1458  python rt.py imMain_32.txt 16
+ 1459  vim rt.py 
+ 1460  python rt.py imMain_32.txt 16
+ 1461  vim rt.py 
+ 1462  python rt.py imMain_32.txt 16
+ 1463  vim rt.py 
+ 1464  python rt.py imMain_32.txt 16
+ 1465  vim rt.py 
+ 1466  python rt.py imMain_32.txt 16
+ 1467  vim rt.py 
+ 1468  python rt.py imMain_32.txt 16
+ 1469  vim rt.py 
+ 1470  cd CS6740/
+ 1471  cd Assgn3/
+ 1472  ls
+ 1473  python rtree.py imMain_32.txt 16
+ 1474  python rt.py imMain_32.txt 16
+ 1475  ls
+ 1476  top
+ 1477  %
+ 1478  cd CS6740/
+ 1479  cd Assgn3/
+ 1480  vim rt.py 
+ 1481  yop
+ 1482  top
+ 1483  cd CS6740/Assgn3/
+ 1484  vim rt.py 
+ 1485  ls
+ 1486  vim rt.py 
+ 1487  ls -a
+ 1488  rm .rt.py.swp 
+ 1489  ;s
+ 1490  ls
+ 1491  ls -a
+ 1492  vim rt.py 
+ 1493  cp rt.py rtMem.py
+ 1494  vim rtMem.py 
+ 1495  python rtMem.py imMain_32.txt 4 5 5
+ 1496  vim rtMem.py 
+ 1497  python rtMem.py imMain_32.txt 4 5 5
+ 1498  python rtMem.py imMain_32.txt 4 5 0.5
+ 1499  python rtMem.py imMain_32.txt 4 100\ 0.5
+ 1500  python rtMem.py imMain_32.txt 4 100 0.5
+ 1501  vim rtMem.py 
+ 1502  python rtMem.py imMain_32.txt 4 100 0.5
+ 1503  vim rtMem.py 
+ 1504  python rtMem.py imMain_32.txt 2 100 0.5
+ 1505  vim rtMem.py 
+ 1506  scp abhik@192.168.100.101:~/.vimrc .
+ 1507  vim run.sh
+ 1508  cd CS6740/
+ 1509  cd Assgn3/
+ 1510  ls
+ 1511  vim run.sh
+ 1512  ls l
+ 1513  ls -a
+ 1514  rm .run.sh.swp 
+ 1515  vim run.sh
+ 1516  mkdir out
+ 1517  screen -r
+ 1518  screen
+ 1519  cp rt.py rtDisk.py
+ 1520  vim rtDisk.py 
+ 1521  cp rtMem.py rtDisk.py
+ 1522  vim rtDisk.py 
+ 1523  cd CS6740/Assgn3/
+ 1524  vim rtDisk.py 
+ 1525  rm .rtDisk.py.swp 
+ 1526  vim rtDisk.py 
+ 1527  screen -r
+ 1528  ls
+ 1529  cd out
+ 1530  ls
+ 1531  ls -l
+ 1532  exit
+ 1533  cd CS6740/Assgn3/
+ 1534  ls -l out/
+ 1535  exit
+ 1536  screen -r
+ 1537  screen -r 12988
+ 1538  screen 12988
+ 1539  cd CS6740/Assgn3/
+ 1540  ls -l out/
+ 1541  screen -r
+ 1542  ls
+ 1543  cd out/
+ 1544  ls -l
+ 1545  cat 1
+ 1546  cat 2
+ 1547  cat 3
+ 1548  ls
+ 1549  vim run.sh
+ 1550  vim ../run.sh 
+ 1551  vim run.sh
+ 1552  vim ../run.sh 
+ 1553  screen
+ 1554  ls -l
+ 1555  exit
+ 1556  cd CS6740/Assgn3/
+ 1557  ls
+ 1558  ls -l out/
+ 1559  screen -r
+ 1560  screen
+ 1561  ls
+ 1562  cd out/
+ 1563  ls -l
+ 1564  cat 6
+ 1565  cd ..
+ 1566  screen
+ 1567  screen -r
+ 1568  kill 18822
+ 1569  vim run.sh 
+ 1570  ls
+ 1571  cd CS6740/Assgn3/
+ 1572  ls
+ 1573  screen -r
+ 1574  ls -l out/
+ 1575  vim rt.py 
+ 1576  screen -r
+ 1577  ls
+ 1578  cd CS6740/Assgn3/
+ 1579  ls
+ 1580  screen
+ 1581  screen -r
+ 1582  kill 12988
+ 1583  kill 15672
+ 1584  kill 17818
+ 1585  kill 17869
+ 1586  kill 17892
+ 1587  kill 18175
+ 1588  kill 18304
+ 1589  kill 18739
+ 1590  ls
+ 1591  screen -r
+ 1592  screen
+ 1593  ls
+ 1594  top
+ 1595  ls
+ 1596  vim rtDisk.py 
+ 1597  screen -r
+ 1598  ls -l out/
+ 1599  cat 6 7 8
+ 1600  cat 6
+ 1601  cat out/6 out/7  out 8
+ 1602  cat out/6 out/7  out/8
+ 1603  vim run.sh 
+ 1604  exit
+ 1605  ls
+ 1606  cd CS6740/Assgn3/
+ 1607  ls
+ 1608  screen -r
+ 1609  vim rtDisk.py 
+ 1610  vim knn.py
+ 1611  exit
+ 1612  ls
+ 1613  vim knn.py 
+ 1614  cp knn.py CS6740/Assgn3/
+ 1615  cd CS6740/Assgn3/
+ 1616  ls
+ 1617  vim rtDisk.py 
+ 1618  screen -r 
+ 1619  ls -l out/
+ 1620  screen -r
+ 1621  vim run.sh 
+ 1622  python rtMem.py imMain_32.txt 2 100 0.5
+ 1623  python rtMem.py imMain_32.txt 2 100 0.9
+ 1624  python rtMem.py imMain_32.txt 2 100 0.1
+ 1625  python rtMem.py imMain_32.txt 2 100 0.3
+ 1626  python rtMem.py imMain_32.txt 2 100 0.4
+ 1627  python rtMem.py imMain_32.txt 2 100 0.2
+ 1628  python rtMem.py imMain_32.txt 2 100 0.5
+ 1629  python rtMem.py imMain_32.txt 2 200 0.5
+ 1630  python rtMem.py imMain_32.txt 2 500 0.5
+ 1631  python rtMem.py imMain_32.txt 2 10 0.5
+ 1632  python rtMem.py imMain_32.txt 2 50 0.5
+ 1633  python rtMem.py imMain_32.txt 4 50 0.5
+ 1634  vim rtDisk.py 
+ 1635  python rtMem.py imMain_32.txt 2 100 0.5
+ 1636  sudo apt-get install python-numpy python-scipy python-matplotlib
+ 1637  sudo apt-get install matplotlib
+ 1638  exit
+ 1639  sudo apt-get install matplotlib
+ 1640  sudo rm /var/lib/dpkg/lock
+ 1641  sudo dpkg --configure -a
+ 1642  sudo apt-get install matplotlib
+ 1643  sudo apt-get install python-matplotlib
+ 1644  sudo rm /var/lib/dpkg/lock
+ 1645  sudo dpkg --configure -a
+ 1646  sudo apt-get install python-matplotlib
+ 1647  cd CS6740/Assgn3/
+ 1648  ls
+ 1649  python rtMem.py imMain_32.txt 2 100 0.5
+ 1650  sudo apt-get install python-matplotlib
+ 1651  sudo apt-get install python-pylab
+ 1652  sudo rm /var/lib/dpkg/lock
+ 1653  sudo dpkg --configure -a
+ 1654  sudo apt-get install python-pylab
+ 1655  sudo apt-get install python-matplotlib
+ 1656  top
+ 1657  sudo apt-get update 
+ 1658  vim knn.py
+ 1659  python rtMem.py imMain_32.txt 2 100 0.5
+ 1660  vim knn.py
+ 1661  python
+ 1662  vim rtMem.py 
+ 1663  cd CS6740/Assgn3/out/
+ 1664  ls
+ 1665  cd ..
+ 1666  ls
+ 1667  vim rtMem.py 
+ 1668  ls
+ 1669  rm .rtDisk.py.swp 
+ 1670  vim rtMem.py 
+ 1671  python rtMem.py imMain_32.txt 2 100 0.5
+ 1672  python rtDisk.py imMain_32.txt 2 100 0.5
+ 1673  vim rtDisk.py 
+ 1674  vim rtMem.py 
+ 1675  vim rtDisk.py 
+ 1676  exit
+ 1677  cd CS6740/Assgn3/
+ 1678  ls
+ 1679  rm knn.pyc 
+ 1680  ls
+ 1681  vim rtMem.py 
+ 1682  vim knn.py 
+ 1683  vim rtMem.py 
+ 1684  python rtMem.py imMain_32.txt 2 100 0.5
+ 1685  vim rtMem.py 
+ 1686  python rtMem.py imMain_32.txt 2 100 0.5
+ 1687  vim rtMem.py 
+ 1688  python rtMem.py imMain_32.txt 2 100 0.5
+ 1689  vim rtMem.py 
+ 1690  python rtMem.py imMain_32.txt 2 100 0.5
+ 1691  vim rtMem.py 
+ 1692  vim rtDisk.py 
+ 1693  cd CS6740/Assgn3/
+ 1694  vim run.sh 
+ 1695  cd Mem
+ 1696  mkdir Mem
+ 1697  mkdir Dis
+ 1698  screen
+ 1699  exit
+ 1700  screen -r
+ 1701  screen -r 18870
+ 1702  screen -r
+ 1703  screen -r 23083
+ 1704  exit
+ 1705  screen -r
+ 1706  screen -r 23083
+ 1707  cd CS6740/Assgn3/
+ 1708  ls
+ 1709  ls -l Mem/
+ 1710  ls -l Dis/
+ 1711  cd Mem/
+ 1712  ls
+ 1713  cat 2 4 8 16 32
+ 1714  exit
+ 1715  cd CS6740/Assgn3/Dis/
+ 1716  ls
+ 1717  cat 2 4 8 16 32
+ 1718  cd ..
+ 1719  vim run.sh 
+ 1720  exit
+ 1721  cd CS6740/Assgn3/
+ 1722  vim run.sh 
+ 1723  exit
+ 1724  top
+ 1725  cd CS6740/Assgn3/
+ 1726  ls
+ 1727  vim rtDisk.py 
+ 1728  vim rtMem.py 
+ 1729  exit
+ 1730  cd DDP/L2Similarity/
+ 1731  java -cp bin main.read_file data_1k 10 10 0.3
+ 1732  java -cp bin main.read_file data_1k 10 10 0.1
+ 1733  java -cp bin main.read_file data_1k 10 10 0.01
+ 1734  make
+ 1735  java -cp bin main.read_file data_1k 10 10 0.01
+ 1736  java -cp bin main.read_file data_1k 10 10 0.3
+ 1737  head -2 data_new_test 
+ 1738  head -2 files/data_1k 
+ 1739  head -2 files/data_old_test
+ 1740  head -2 files/data_new_test 
+ 1741  ls files/
+ 1742  emacs ~/.bash_history &
+ 1743  head -1000 files/indexdata > files/indexdatafirst1000
+ 1744  java -cp bin main.read_file data_1k 10 10 0.3
+ 1745  java -cp bin main.read_file data_1k 10 10 0.01
+ 1746  java -cp bin main.read_file data_1k 10 10 0.001
+ 1747  java -cp bin main.read_file data_1k 10 10 0.00001
+ 1748  source run.sh 
+ 1749  source run.sh 
+ 1750  cd /home/jithin/Desktop/project/report/abhik
+ 1751  ls
+ 1752  cd Final/
+ 1753  ls
+ 1754  cd
+ 1755  cp -r /home/jithin/Desktop/project/report/abhik/Final/ .
+ 1756  sudo cp -r /home/jithin/Desktop/project/report/abhik/Final/ .
+ 1757  ls
+ 1758  cd Final/
+ 1759  ls
+ 1760  ls -l
+ 1761  chmod -R 777 .
+ 1762  sudo chmod -R 777 .
+ 1763  ls
+ 1764  ls -l
+ 1765  cd Desktop/jithin/
+ 1766  ls
+ 1767  cd /home/jithin/Desktop/project/data/lipschitz/
+ 1768  ls
+ 1769  who
+ 1770  ls -u
+ 1771  who -l
+ 1772  sudo kill -u guest_1
+ 1773  sudo kill -u guest_1 952
+ 1774  who
+ 1775  top
+ 1776  git push origin master
+ 1777  git add *
+ 1778  git push origin master
+ 1779  git commit
+ 1780  git push origin master
+ 1781  ifconfig
+ 1782  cd
+ 1783  cd DDP/L2Similarity/
+ 1784  ;s
+ 1785  ls
+ 1786  vim run.sh 
+ 1787  vim Makefile 
+ 1788  make
+ 1789  vim Makefile 
+ 1790  make
+ 1791  vim run.sh 
+ 1792  cp run.sh prev_run.sh
+ 1793  ls
+ 1794  vim run.sh 
+ 1795  cd output/
+ 1796  mkdir compare
+ 1797  ;s
+ 1798  ls
+ 1799  cd ..
+ 1800  make
+ 1801  screen
+ 1802  vim run.sh 
+ 1803  ls
+ 1804  ls output/compare/
+ 1805  ls -l output/compare/
+ 1806  cd DDP/
+ 1807  ;s
+ 1808  ls
+ 1809  cd L2Similarity/
+ 1810  ls
+ 1811  ls -l
+ 1812  cd src/
+ 1813  ls
+ 1814  ls -a
+ 1815  history
+ 1816  history > history.txt
+ 1817  vim history.txt 
+ 1818  rm history.txt 
+ 1819  ls
+ 1820  $histfile
+ 1821  $HISTFILE
+ 1822  vim /home/abhik/.bash_history 
+ 1823  ssh abhikm@10.6.15.91
+ 1824  cd
+ 1825  find -name libmwmclmcrrt.so
+ 1826  LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/Matlab/runtime/glnx86/
+ 1827  export LD_LIBRARY_PATH
+ 1828  LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/Matlab/runtime/glnx86/libmwmclmrrt.so
+ 1829  export LD_LIBRARY_PATH
+ 1830  cd Matlab/
+ 1831  ./getData ./bin/matlab 61
+ 1832  cd
+ 1833  LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/Matlab/runtime/glnxa64/libmwmclmrrt.so
+ 1834  export LD_LIBRARY_PATH
+ 1835  cd Matlab/
+ 1836  ./getData ./bin/matlab 61
+ 1837  cd
+ 1838  cd Desktop/
+ 1839  source run_getData.sh 61
+ 1840  ./getD 61
+ 1841  ./getData 61
+ 1842  ./getD ./bin/matlab 61
+ 1843  cd
+ 1844  cd Desktop/
+ 1845  source run_getData.sh 61
+ 1846  cd
+ 1847  cd Matlab/
+ 1848  ls
+ 1849  ./bin/matlab 
+ 1850  cd ../Desktop/
+ 1851  source run_getData.sh  61
+ 1852  ls
+ 1853  cd DDP/L2Similarity/output/
+ 1854  ls
+ 1855  ls -l compare/
+ 1856  cat soap1
+ 1857  cat compare/soap1 
+ 1858  screen -r
+ 1859  ping google.com
+ 1860  ping www.google.com
+ 1861  cd ..
+ 1862  cd
+ 1863  cd Matlab/
+ 1864  ./run_getData.sh ~/Matlab 61
+ 1865  ./bin/matlab 
+ 1866  ./run_getData.sh ~/Matlab 61
+ 1867  cd Matlab/
+ 1868  ./run_getData.sh ~/Matlab 61
+ 1869  ls
+ 1870  ./bin/matlab 
+ 1871  ./run_getData.sh ~/Matlab 61
+ 1872  ls
+ 1873  ls -l
+ 1874  cd 
+ 1875  cd Desktop/
+ 1876  ls
+ 1877  ./run_getData.sh ~/Matlab 61
+ 1878  ls -l
+ 1879  ./run_getData.sh ~/Matlab 61
+ 1880  ls -l
+ 1881  cd Matlab/
+ 1882  ls
+ 1883  vim getData.p
+ 1884  cd
+ 1885  Matlab/bin/matlab 
+ 1886  unity --replace
+ 1887  sudo apt-get reinstall unity
+ 1888  sudo apt-get install unity
+ 1889  unity --replace
+ 1890  exit
+ 1891  shutdown
+ 1892  sudo shutdown now
+ 1893  cd Matlab/
+ 1894  ./bin/matlab 
+ 1895  cd ..
+ 1896  ls
+ 1897  cd Matlab/
+ 1898  ls
+ 1899  ./run_getData.sh ~/Matlab 18
+ 1900  ls
+ 1901  ls -l
+ 1902  scp cluster_data.* ditty@10.6.30.89
+ 1903  scp cluster_data.* ditty@10.6.30.89:
+ 1904  ping google.com
+ 1905  restart now
+ 1906  sudo restart now
+ 1907  sudo shutdown now
+ 1908  fsck 
+ 1909  sudo service lightdm --full-restart
+ 1910  sudo apt-get update
+ 1911  sudo restart now
+ 1912  sudo shutdown now
+ 1913  sudo apt-get update
+ 1914  unity --replace
+ 1915  gnome --replace
+ 1916  unity
+ 1917  sudo shutdown now
+ 1918  sudo reboot
+ 1919  unity --replace
+ 1920  sudo apt-get upgrade unity
+ 1921  sudo reboot
+ 1922  cd
+ 1923  ssh abhikm@10.6.16.92
+ 1924  ssh abhikm@10.6.16.91
+ 1925  ssh abhikm@10.6.16.93
+ 1926  ssh abhikm@10.6.16.99
+ 1927  ssh abhikm@10.6.15.91
+ 1928  exit
+ 1929  cd 
+ 1930  cd Matlab/
+ 1931  ./bin/matlab 
+ 1932  source run.sh 
+ 1933  vim run.sh 
+ 1934  grep MemTotal /proc/meminfo
+ 1935  vim run.sh 
+ 1936  source run.sh 
+ 1937  exit
+ 1938  sudo apt-get install linuxdcpp
+ 1939  cd DDP/L2Similarity/
+ 1940  ls
+ 1941  vi Makefile 
+ 1942  ls bin/
+ 1943  cd output/compare/
+ 1944  ls
+ 1945  ls -l
+ 1946  cat soap1
+ 1947  cat sp1
+ 1948  cat sp2
+ 1949  cat sp3
+ 1950  cat sp4
+ 1951  cat soap2
+ 1952  cat soap4
+ 1953  cat soap8
+ 1954  cat sp8
+ 1955  ls -l
+ 1956  clear
+ 1957  cl
+ 1958  clear
+ 1959  cat *
+ 1960  ls -l
+ 1961  ls
+ 1962  ls -l
+ 1963  cd ../..
+ 1964  vi Makefile 
+ 1965  make
+ 1966  vi Makefile 
+ 1967  make
+ 1968  vim run.sh 
+ 1969  cp run.sh compare_run.sh
+ 1970  vim run.sh 
+ 1971  vim compare_run.sh 
+ 1972  vim run.sh 
+ 1973  screen -r
+ 1974  screen
+ 1975  screen -r
+ 1976  cd output/
+ 1977  ls -l
+ 1978  cd compare/
+ 1979  ls -l
+ 1980  cat ii1 
+ 1981  ls
+ 1982  screen -r
+ 1983  who
+ 1984  top
+ 1985  m
+ 1986  cd DDP/L2Similarity/
+ 1987  vim run.sh 
+ 1988  screen -r
+ 1989  screen
+ 1990  screen -r
+ 1991  screen -d 3651
+ 1992  screen -r 3651
+ 1993  source run.sh 
+ 1994  make
+ 1995  vim run.sh 
+ 1996  screen -r
+ 1997  source run.sh 
+ 1998  ls -l output/compare2/
+ 1999  cd output/compare2/
+ 2000  cat II1
+ 2001  cat II2
+ 2002  cat sp1
+ 2003  cd ../../
+ 2004  git push origin master
+ 2005  cd src/
+ 2006  ls
+ 2007  history 
+ 2008  history > hist

@@ -13,6 +13,11 @@ import java.util.Scanner;
 public class read_file {
 	public static void main(String[] args) throws IOException{
 		
+		
+		
+		// USAGE:  args (inputfile pivotsize outliersize distance)
+		
+		
 		Data data= new Data();
 		int size;
 		Scanner in= new Scanner(System.in);
@@ -95,7 +100,7 @@ public class read_file {
 		
 		
 		Data testdata= new Data();
-		br = new BufferedReader(new FileReader(new File("files/test500")));		
+		br = new BufferedReader(new FileReader(new File("files/testdatabin")));		
 		count=0;
 		while((line=br.readLine()) !=null){
 			count++;
@@ -125,7 +130,7 @@ public class read_file {
 			
 			//finger_print f=indx.closest_finger(testdata.data_set.get(i));	
 			
-			System.out.println(f.size());			
+			//System.out.println(f.size());			
 			//indexed.add(f.size());
 		
 		
@@ -156,7 +161,7 @@ public class read_file {
 			//System.out.println("Avg Comparison "+1.0*comparisons/testdata.data_set.size() +" compared to "+data.data_set.size());
 			//System.out.println("For querying using indexing Took "+Math.pow(10,-6)*1.0*(endTime - startTime)/testdata.data_set.size() + " ms per compund "); 
 		
-			System.out.println(1.0*comparisons/testdata.data_set.size());
+			//System.out.println(1.0*comparisons/testdata.data_set.size());
 			System.out.println(Math.pow(10,-6)*1.0*(endTime - startTime)/testdata.data_set.size()); 
 		
 			

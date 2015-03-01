@@ -1,7 +1,8 @@
-package main;
+package invert_index;
 
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Hashtable;
 
@@ -10,66 +11,85 @@ public class finger_print implements Comparable<finger_print>{
 	
 	/***/
 	public static HashMap<Integer, HashMap<Integer, Double>> invert_index = new HashMap<Integer,HashMap<Integer,Double>>();
-		
+	
 	/***/
 	public int id;
 	public double sim_closest_pivot;
-	public node closest_pivot;
 	public HashMap<Integer, Double> feature_map;
+	public int feature_size;
 	public String line;
 	public int comparisons;
 	public static boolean index=true;
 	
-	static ArrayList<Integer> f_values=new ArrayList<Integer>();
-	static ArrayList<Integer> f_valin=new ArrayList<Integer>();
+	public static HashMap<Integer,Integer> f_points=new HashMap<Integer,Integer>();
+	public static ArrayList<Integer> f_sort = new ArrayList<Integer>();
+	//public static ArrayList<Integer> f_sort_values = new ArrayList<Integer>();
+	public static Comparator<Integer> comp = new MyComparator();
+	
+	public static HashMap<Integer,Integer> mn_ft_allpts_infeat= new HashMap<Integer,Integer>();
 	//initialize the data item
 	public finger_print(int id_num) {
 		id=id_num;
 		feature_map= new HashMap<Integer, Double>();
 		sim_closest_pivot=-1;
 		comparisons=0;
+		feature_size=0;
 		
 	}
 
 	//add feature values
 	public void add_feature(int feature_id, double feature_value){
 		feature_map.put(feature_id, feature_value);
+
+		feature_size++;
 	}
 	
 	//add all features in string format
 	public void add_all_features(String[] features_string){
-		f_valin.add(features_string.length);
 		for(int i=0;i<features_string.length;i++){
 			String[] feature_parsed= features_string[i].replace(":", " ").trim().split("\\s+");
-			int f_id= Integer.parseInt(feature_parsed[0]);
-				if(!f_values.contains(f_id)){
-					f_values.add(f_id);
+			int f_id= Integer.parseInt(feature_parsed[0]);			
+			double f_val= Double.parseDouble(feature_parsed[1]);
+			if(!f_points.containsKey(f_id)){
+				f_points.put(f_id,1);
+				f_sort.add(f_id);
+				
+				/**/
+				if(index){
+					invert_index.put(f_id, new HashMap<Integer,Double>());
+				/**/
 					
+				}
 					
-					/**/
-					if(index)
-						invert_index.put(f_id, new HashMap<Integer,Double>());
-					/**/
-						
+			}
+			else{
+			
+				f_points.put(f_id,f_points.get(f_id)+1);
+				
+			}
+			if(index){
+				if(!mn_ft_allpts_infeat.containsKey(f_id)){
+					mn_ft_allpts_infeat.put(f_id, features_string.length);
+				}
+				else{
+					mn_ft_allpts_infeat.put(f_id, Math.min(features_string.length, mn_ft_allpts_infeat.get(f_id)));							
 				}
 			
+				invert_index.get(f_id).put(this.id, f_val);
 				
-				
-				
-			double f_val= Double.parseDouble(feature_parsed[1]);
-			
+			}
 			
 			/**/
 			feature_map.put(f_id, f_val);			
-			if(index){
-				invert_index.get(f_id).put(this.id, f_val);
-			}
 			/**/
 			
 			
 		
 		}
+		feature_size=features_string.length;
 	}
+	
+
 	
 	/* Tanimoto 
 	 *
@@ -182,16 +202,6 @@ public class finger_print implements Comparable<finger_print>{
 		else return 1;
 	}
 
-	public void set_sim_pivot(ArrayList<node> lst){		
-		sim_closest_pivot=-1;
-		for(node fp: lst){
-			double sim= getSimilarity(fp.getPivot());
-			if(sim_closest_pivot == -1 || sim_closest_pivot < sim){
-				sim_closest_pivot=sim;
-				closest_pivot=fp;
-			}
-		}
-	}
 
 	public int getId() {
 		return id;
@@ -208,21 +218,7 @@ public class finger_print implements Comparable<finger_print>{
 	public void setSim_closest_pivot(double sim_closest_pivot) {
 		this.sim_closest_pivot = sim_closest_pivot;
 	}
-
-	public node getClosest_pivot() {
-		return closest_pivot;
-	}
-
-	public void setClosest_pivot(node closest_pivot) {
-		this.closest_pivot = closest_pivot;
-	}
-
-	public HashMap<Integer, Double> getFeature_map() {
-		return feature_map;
-	}
-
-	public void setFeature_map(HashMap<Integer, Double> feature_map) {
-		this.feature_map = feature_map;
-	}
 		
 }
+
+
