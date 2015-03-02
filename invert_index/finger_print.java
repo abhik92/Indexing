@@ -11,6 +11,11 @@ public class finger_print implements Comparable<finger_print>{
 	
 	/***/
 	public static HashMap<Integer, HashMap<Integer, Double>> invert_index = new HashMap<Integer,HashMap<Integer,Double>>();
+	public static HashMap<Integer,Integer> f_points=new HashMap<Integer,Integer>();
+	public static ArrayList<Integer> f_sort = new ArrayList<Integer>();
+	public static Comparator<Integer> comp = new MyComparator();
+	public static HashMap<Integer,Integer> mn_ft_allpts_infeat= new HashMap<Integer,Integer>();
+	public static boolean index=true;
 	
 	/***/
 	public int id;
@@ -19,14 +24,7 @@ public class finger_print implements Comparable<finger_print>{
 	public int feature_size;
 	public String line;
 	public int comparisons;
-	public static boolean index=true;
 	
-	public static HashMap<Integer,Integer> f_points=new HashMap<Integer,Integer>();
-	public static ArrayList<Integer> f_sort = new ArrayList<Integer>();
-	//public static ArrayList<Integer> f_sort_values = new ArrayList<Integer>();
-	public static Comparator<Integer> comp = new MyComparator();
-	
-	public static HashMap<Integer,Integer> mn_ft_allpts_infeat= new HashMap<Integer,Integer>();
 	//initialize the data item
 	public finger_print(int id_num) {
 		id=id_num;

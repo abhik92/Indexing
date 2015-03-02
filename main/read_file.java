@@ -65,7 +65,6 @@ public class read_file {
 			fp.add_all_features(features_list);
 			orig1000.data_set.put(count, fp);
 		}
-
 		
 		Data orig= new Data();		
 		br = new BufferedReader(new FileReader(new File("files/data_old_test")));

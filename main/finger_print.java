@@ -3,23 +3,14 @@ package main;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Hashtable;
 
 public class finger_print implements Comparable<finger_print>{
-
-	
-	/***/
-	public static HashMap<Integer, HashMap<Integer, Double>> invert_index = new HashMap<Integer,HashMap<Integer,Double>>();
-		
-	/***/
-	public int id;
-	public double sim_closest_pivot;
-	public node closest_pivot;
-	public HashMap<Integer, Double> feature_map;
-	public String line;
-	public int comparisons;
-	public static boolean index=true;
-	
+	int id;
+	double sim_closest_pivot;
+	node closest_pivot;
+	HashMap<Integer, Double> feature_map;
+	String line;
+	int comparisons;
 	static ArrayList<Integer> f_values=new ArrayList<Integer>();
 	static ArrayList<Integer> f_valin=new ArrayList<Integer>();
 	//initialize the data item
@@ -28,7 +19,6 @@ public class finger_print implements Comparable<finger_print>{
 		feature_map= new HashMap<Integer, Double>();
 		sim_closest_pivot=-1;
 		comparisons=0;
-		
 	}
 
 	//add feature values
@@ -44,30 +34,10 @@ public class finger_print implements Comparable<finger_print>{
 			int f_id= Integer.parseInt(feature_parsed[0]);
 				if(!f_values.contains(f_id)){
 					f_values.add(f_id);
-					
-					
-					/**/
-					if(index)
-						invert_index.put(f_id, new HashMap<Integer,Double>());
-					/**/
-						
 				}
 			
-				
-				
-				
 			double f_val= Double.parseDouble(feature_parsed[1]);
-			
-			
-			/**/
-			feature_map.put(f_id, f_val);			
-			if(index){
-				invert_index.get(f_id).put(this.id, f_val);
-			}
-			/**/
-			
-			
-		
+			feature_map.put(f_id, f_val);
 		}
 	}
 	
@@ -76,12 +46,12 @@ public class finger_print implements Comparable<finger_print>{
 	 *
 	 */
 	public double getSimilarity(finger_print fp){
-		return this.getTanimotoSimilarity(fp);		
+		//return this.getTanimotoSimilarity(fp);		
 		
 		
 		//return 1.0- getL2Distance(fp);
 		
-		//return 1 -  (1.0*getL1Distance(fp) / 514);
+		return 1 -  (1.0*getL1Distance(fp) / 514);
 				
 	}
 	
