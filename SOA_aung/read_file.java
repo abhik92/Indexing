@@ -53,7 +53,7 @@ public class read_file {
 		//}
 		
 		ArrayList<finger_print> test_set= new ArrayList<finger_print>();		
-		br = new BufferedReader(new FileReader(new File("files/testdatabin")));		
+		br = new BufferedReader(new FileReader(new File("files/"+args[3])));		
 		count=0;
 		while((line=br.readLine()) !=null){
 			count++;
@@ -63,19 +63,22 @@ public class read_file {
 			test_set.add(fp);
 		}
 		
+
+		for(int j=1;j<=9;j++){
+			dis=0.1*j;
 		
-		long startTime = System.nanoTime();		
-		for(int i=1;i<=test_set.size();i++){
-			finger_print f = test_set.get(i-1);
-			idx.create_splits(f);
-			ArrayList<finger_print> search = idx.range_search(f,dis);			
+			long startTime = System.nanoTime();		
+			for(int i=1;i<=test_set.size();i++){
+				finger_print f = test_set.get(i-1);
+				idx.create_splits(f);
+				ArrayList<finger_print> search = idx.range_search(f,dis);			
+			}
+			
+			long endTime = System.nanoTime();
+		
+		
+			System.out.println("dis  --- "+j+" "+Math.pow(10,-6)*1.0*(endTime - startTime)/test_set.size()); 
 		}
-		
-		long endTime = System.nanoTime();
-		
-		
-		System.out.println(Math.pow(10,-6)*1.0*(endTime - startTime)/test_set.size()); 
-		
 		
 		
 		

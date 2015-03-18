@@ -99,7 +99,7 @@ public class read_file {
 		
 		
 		Data testdata= new Data();
-		br = new BufferedReader(new FileReader(new File("files/testdatabin")));		
+		br = new BufferedReader(new FileReader(new File("files/test500")));		
 		count=0;
 		while((line=br.readLine()) !=null){
 			count++;
@@ -119,6 +119,9 @@ public class read_file {
 		
 		
 		//indx.=data;
+		
+		for(int j=1;j<=1;j++){
+		dis=0.5*j;
 		startTime = System.nanoTime();		
 		for(int i=1;i<=testdata.data_set.size();i++){
 				
@@ -129,7 +132,7 @@ public class read_file {
 			
 			//finger_print f=indx.closest_finger(testdata.data_set.get(i));	
 			
-			//System.out.println(f.size());			
+			System.out.println(f);			
 			//indexed.add(f.size());
 		
 		
@@ -147,8 +150,9 @@ public class read_file {
 		endTime = System.nanoTime();
 		
 		//System.out.println();
+		System.out.println("dis ----- "+Math.pow(10,-6)*1.0*(endTime - startTime)/testdata.data_set.size()); 
 		
-		
+		}
 		
 		
 		//change orig to testdata
@@ -161,7 +165,6 @@ public class read_file {
 			//System.out.println("For querying using indexing Took "+Math.pow(10,-6)*1.0*(endTime - startTime)/testdata.data_set.size() + " ms per compund "); 
 		
 			//System.out.println(1.0*comparisons/testdata.data_set.size());
-			System.out.println(Math.pow(10,-6)*1.0*(endTime - startTime)/testdata.data_set.size()); 
 		
 			
 			

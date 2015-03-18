@@ -194,5 +194,8 @@ public class finger_print implements Comparable<finger_print>{
 	public void setFeature_map(HashMap<Integer, Double> feature_map) {
 		this.feature_map = feature_map;
 	}
-		
+
+	public String toString() {
+        return ("Fingerprint id:"+this.id);
+   }
 }
