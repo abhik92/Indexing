@@ -44,11 +44,18 @@ public class read_file {
 		indx.PIVOT_SIZE_TOTAL=Integer.parseInt(args[1]);
 		indx.OUTLIERS_SIZE=Integer.parseInt(args[2]);
 		
+		
+		System.out.println("DATASET Size :"+args[0]);
+		System.out.println("indx.PIVOT_SIZE_TOTAL "+indx.PIVOT_SIZE_TOTAL);
+		System.out.println("indx.OUTLIERS_SIZE "+indx.OUTLIERS_SIZE);
+		System.out.println();
+		
+		
 		long startTime = System.nanoTime();		
 		indx.run();
 		long endTime = System.nanoTime();
 		//System.out.println("Took "+Math.pow(10,-6)*1.0*(endTime - startTime)/data.data_set.size() + " ms per compund for indexing "+data.data_set.size() +" with "+ indx.PIVOT_SIZE_TOTAL+" pivots" ); 
-		System.out.println(Math.pow(10,-6)*1.0*(endTime - startTime)/data.data_set.size()); 
+		System.out.println("Indexing time "+Math.pow(10,-6)*1.0*(endTime - startTime)/data.data_set.size()); 
 		
 		
 ////////////////////////////////////////////////////////////////////////////		
@@ -99,7 +106,7 @@ public class read_file {
 		
 		
 		Data testdata= new Data();
-		br = new BufferedReader(new FileReader(new File("files/test500")));		
+		br = new BufferedReader(new FileReader(new File("files/"+args[3])));		
 		count=0;
 		while((line=br.readLine()) !=null){
 			count++;
@@ -112,7 +119,7 @@ public class read_file {
 		
 		
 		
-		double dis = Double.parseDouble(args[3]);
+		double dis;// = Double.parseDouble(args[3]);
 		
 		ArrayList<Integer> indexed= new ArrayList<Integer>();
 		ArrayList<Integer> linear= new ArrayList<Integer>();
@@ -120,8 +127,8 @@ public class read_file {
 		
 		//indx.=data;
 		
-		for(int j=1;j<=1;j++){
-		dis=0.5*j;
+		for(int j=1;j<=9;j++){
+		dis=0.1*j;
 		startTime = System.nanoTime();		
 		for(int i=1;i<=testdata.data_set.size();i++){
 				
@@ -132,7 +139,7 @@ public class read_file {
 			
 			//finger_print f=indx.closest_finger(testdata.data_set.get(i));	
 			
-			System.out.println(f);			
+			//System.out.println(f);			
 			//indexed.add(f.size());
 		
 		
@@ -150,7 +157,7 @@ public class read_file {
 		endTime = System.nanoTime();
 		
 		//System.out.println();
-		System.out.println("dis ----- "+Math.pow(10,-6)*1.0*(endTime - startTime)/testdata.data_set.size()); 
+		System.out.println("dis ----- "+j+" "+Math.pow(10,-6)*1.0*(endTime - startTime)/testdata.data_set.size()); 
 		
 		}
 		
@@ -164,11 +171,11 @@ public class read_file {
 			//System.out.println("Avg Comparison "+1.0*comparisons/testdata.data_set.size() +" compared to "+data.data_set.size());
 			//System.out.println("For querying using indexing Took "+Math.pow(10,-6)*1.0*(endTime - startTime)/testdata.data_set.size() + " ms per compund "); 
 		
-			//System.out.println(1.0*comparisons/testdata.data_set.size());
+		//System.out.println("Comparisons "+1.0*comparisons/testdata.data_set.size());
 		
 			
 			
-		startTime = System.nanoTime();				
+		//startTime = System.nanoTime();				
 		
 		
 
@@ -182,9 +189,9 @@ public class read_file {
 		*/
 			
 		
-		endTime = System.nanoTime();
+		//endTime = System.nanoTime();
 		//System.out.println("For all pair similairty Took "+Math.pow(10,-6)*1.0*(endTime - startTime)/testdata.data_set.size() + " ms per compund "); 
-		System.out.println(Math.pow(10,-6)*1.0*(endTime - startTime)/testdata.data_set.size()); 
+		//System.out.println(Math.pow(10,-6)*1.0*(endTime - startTime)/testdata.data_set.size()); 
 
 		
 		

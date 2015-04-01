@@ -18,7 +18,7 @@ public class FileCon {
 		// TODO Auto-generated method stub
 		
 		
-		BufferedReader br = new BufferedReader(new FileReader(new File("files/indexdata200000")));
+		BufferedReader br = new BufferedReader(new FileReader(new File("files/indexdata100000")));
 		String line;
 		int count=0;
 		while((line=br.readLine()) !=null){

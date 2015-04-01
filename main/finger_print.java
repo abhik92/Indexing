@@ -46,12 +46,12 @@ public class finger_print implements Comparable<finger_print>{
 	 *
 	 */
 	public double getSimilarity(finger_print fp){
-		//return this.getTanimotoSimilarity(fp);		
+		return this.getTanimotoSimilarity(fp);		
 		
 		
 		//return 1.0- getL2Distance(fp);
 		
-		return 1 -  (1.0*getL1Distance(fp) / 514);
+		//return 1 -  (1.0*getL1Distance(fp) / 514);
 				
 	}
 	

@@ -20,10 +20,11 @@ public class finger_print{
 	// how many point sin the database contain the feature
 	public static HashMap<Integer,Integer> f_points=new HashMap<Integer,Integer>();
 	
-	//public static ArrayList<Integer> f_sort = new ArrayList<Integer>();
+	public static ArrayList<Integer> f_sort = new ArrayList<Integer>();
 	
 	// A comparator to sort the features of query point
 	public static Comparator<Integer> comp = new MyComparator();
+	public static Comparator<Integer> improvcomp = new ImprovedComparator();
 	
 	// The minimum number of features contained by the points for a particular feature 
 	public static HashMap<Integer,Integer> mn_ft_allpts_infeat= new HashMap<Integer,Integer>();
@@ -89,31 +90,21 @@ public class finger_print{
 			}
 			double f_val= Double.parseDouble(feature_parsed[1]);
 			feat_sum+=f_val;
-			if(index && !f_points.containsKey(f_id)){
-				f_points.put(f_id,1);  //Check this
-				
-				//f_sort.add(f_id);  // uncomment fsort
-				
-				/**/
-				if(index){
+			
+			// only during indexing step
+			if(index){
+				if(!f_points.containsKey(f_id)){
+					f_points.put(f_id,1);  //Check this
 					invert_index.put(f_id, new HashMap<Integer,Double>());
-				/**/
+						
+				}
+				else {
+					f_points.put(f_id,f_points.get(f_id)+1);
 					
 				}
-					
-			}
-			else if(index){
-			
-				f_points.put(f_id,f_points.get(f_id)+1);
 				
-			}
-			
-			
-			if(index){
 				if(!mn_ft_allpts_infeat.containsKey(f_id)){
 					mn_ft_allpts_infeat.put(f_id, features_string.length);
-					
-					
 					/***non-binary***/
 					
 					if(non_bin){

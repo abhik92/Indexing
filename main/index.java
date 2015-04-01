@@ -219,7 +219,8 @@ public class index {
 		}
 		
 		ArrayList<node> pivot_lst= new ArrayList<node>();
-						
+		
+		
 		Random r= new Random();
 		
 		for(int i=0;i<PIVOT_SIZE_TOTAL;i++){			
@@ -327,9 +328,9 @@ public class index {
         				lst.add(m.pivot);
         				if(!m.isOutlier_pivot()){        					
         					lst.addAll(m.list_objects);
-        					for(int k=0;k<m.list_objects.size();k++){
-        						//System.out.println("Size "+fp.getDistance(m.list_objects.get(k)));
-        					}
+//        					for(int k=0;k<m.list_objects.size();k++){
+//        						//System.out.println("Size "+fp.getDistance(m.list_objects.get(k)));
+//        					}
         				}
         				m=m.next;
         			}	
@@ -345,17 +346,17 @@ public class index {
         	else if((d + n.farthest_child < dis)){
         		lst.add(n.pivot);
         		lst.addAll(n.list_objects);
-        		for(int k=0;k<n.list_objects.size();k++){
-        			//System.out.println("chosen "+fp.getDistance(n.list_objects.get(k)));
-        		}
+//        		for(int k=0;k<n.list_objects.size();k++){
+//        			//System.out.println("chosen "+fp.getDistance(n.list_objects.get(k)));
+//        		}
         	}
         	else if(d - n.farthest_child > dis){               		
         		if(d<dis){
         			lst.add(n.pivot);
         		}
-        		for(int k=0;k<n.list_objects.size();k++){
-        			//System.out.println("Not chosen "+fp.getDistance(n.list_objects.get(k)));
-        		}
+//        		for(int k=0;k<n.list_objects.size();k++){
+//        			//System.out.println("Not chosen "+fp.getDistance(n.list_objects.get(k)));
+//        		}
         	}
         	else{
         		if(d<dis){
@@ -370,9 +371,9 @@ public class index {
         	}
         	n=n.next;
         }
-        for(int j=0;j<lst.size();j++){
-			//System.out.println("new "+lst.get(j).id);
-		}
+//        for(int j=0;j<lst.size();j++){
+//			//System.out.println("new "+lst.get(j).id);
+//		}
         	
         	
         	

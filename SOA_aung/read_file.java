@@ -27,9 +27,10 @@ public class read_file {
 		
 		BufferedReader br = new BufferedReader(new FileReader(new File("files/"+args[0])));
 		
-		double dis = Double.parseDouble(args[1]);
+		double dis;
+		//double dis = Double.parseDouble(args[1]);
 		
-		idx.splt_sze=Integer.parseInt(args[2]);
+		idx.splt_sze=Integer.parseInt(args[1]);
 		
 		String line;
 		int count=0;
@@ -45,7 +46,10 @@ public class read_file {
 		idx.lst_fe = finger_print.lst_fe;
 		
 		// it does Collections.sort(data_set) && Collections.sort(lst_fe);
+		long startTime = System.nanoTime();		
 		idx.run();
+		long endTime = System.nanoTime();
+		System.out.println("Indexing  "+Math.pow(10,-6)*1.0*(endTime - startTime)/count); 
 		
 		
 		//for(features f: lst_fe){
@@ -53,7 +57,7 @@ public class read_file {
 		//}
 		
 		ArrayList<finger_print> test_set= new ArrayList<finger_print>();		
-		br = new BufferedReader(new FileReader(new File("files/"+args[3])));		
+		br = new BufferedReader(new FileReader(new File("files/"+args[2])));		
 		count=0;
 		while((line=br.readLine()) !=null){
 			count++;
@@ -67,26 +71,18 @@ public class read_file {
 		for(int j=1;j<=9;j++){
 			dis=0.1*j;
 		
-			long startTime = System.nanoTime();		
+			startTime = System.nanoTime();		
 			for(int i=1;i<=test_set.size();i++){
 				finger_print f = test_set.get(i-1);
 				idx.create_splits(f);
 				ArrayList<finger_print> search = idx.range_search(f,dis);			
 			}
 			
-			long endTime = System.nanoTime();
-		
+			endTime = System.nanoTime();
+			
 		
 			System.out.println("dis  --- "+j+" "+Math.pow(10,-6)*1.0*(endTime - startTime)/test_set.size()); 
 		}
-		
-		
-		
-		
-		
-		
-		
-		
 		
 		return;
 	}
