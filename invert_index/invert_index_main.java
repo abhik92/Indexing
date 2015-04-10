@@ -31,7 +31,7 @@ public class invert_index_main {
 		int count = 0;
 		int inn = 0;
 		
-		
+		//
 		double startTime = System.nanoTime();
 		
 		while ((line = br.readLine()) != null) {
