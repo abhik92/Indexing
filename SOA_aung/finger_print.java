@@ -57,9 +57,9 @@ public class finger_print implements Comparable<finger_print>{
 	public int compareTo(finger_print o) {
 		// TODO Auto-generated method stub
 		
-		if(this.magnitude < o.magnitude)
+		if(this.magnitude > o.magnitude)
 			return 1;
-		else if(this.magnitude > o.magnitude)
+		else if(this.magnitude < o.magnitude)
 			return -1;
 		return 0;
 	}

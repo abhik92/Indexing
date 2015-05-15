@@ -29,6 +29,9 @@ public class finger_print{
 	// The minimum number of features contained by the points for a particular feature 
 	public static HashMap<Integer,Integer> mn_ft_allpts_infeat= new HashMap<Integer,Integer>();
 	
+	// The maximum number of features contained by the points for a particular feature 
+	public static HashMap<Integer,Integer> mx_ft_allpts_infeat= new HashMap<Integer,Integer>();
+		
 	
 	/**non binary*/
 	
@@ -43,8 +46,16 @@ public class finger_print{
 	
 	// index step
 	public static boolean index=true;
-	public static boolean non_bin=true;
+	public static boolean non_bin=false;
 		
+	
+	//split features
+	public static HashMap<Integer,HashMap<Integer, Double>> map1=  new HashMap<Integer, HashMap<Integer,Double>>();
+	public static  HashMap<Integer,HashMap<Integer, Double>> map2 = new HashMap<Integer, HashMap<Integer,Double>>();
+	public static HashMap<Integer, Integer> min_ft_val_2= new HashMap<Integer, Integer>();
+	
+	
+	
 	
 	/***************************/
 	
@@ -58,6 +69,8 @@ public class finger_print{
 	public int feature_size;						// No of features
 	public String line;								// Feature string	 
 	//public int comparisons;						// No of comparisons for query
+	
+	
 	
 	//initialize the data item
 	public finger_print(int id_num) {
@@ -105,6 +118,9 @@ public class finger_print{
 				
 				if(!mn_ft_allpts_infeat.containsKey(f_id)){
 					mn_ft_allpts_infeat.put(f_id, features_string.length);
+					mx_ft_allpts_infeat.put(f_id, features_string.length);
+					
+					
 					/***non-binary***/
 					
 					if(non_bin){
@@ -115,7 +131,8 @@ public class finger_print{
 				}
 				else{
 					mn_ft_allpts_infeat.put(f_id, Math.min(features_string.length, mn_ft_allpts_infeat.get(f_id)));							
-				
+					mx_ft_allpts_infeat.put(f_id, Math.max(features_string.length, mx_ft_allpts_infeat.get(f_id)));
+					
 					/***non-binary***/
 					if(non_bin){
 						min_ft_val.put(f_id, Math.min(f_val, min_ft_val.get(f_id)));

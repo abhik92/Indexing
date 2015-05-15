@@ -15,10 +15,14 @@ public class split_index {
 
 	public void run() {
 		Collections.sort(vert_splt);
-		Collections.sort(lst_fe);
+		
+//		for(finger_print f: vert_splt)
+//			System.out.print(f.magnitude+" ");
+//		System.out.println();
+//		//Collections.sort(lst_fe);
 
 		// for aungs paper
-		create_splits();
+		//create_splits();
 
 	}
 
@@ -56,24 +60,42 @@ public class split_index {
 
 	public ArrayList<finger_print> range_search(finger_print fp, double dis) {
 		ArrayList<finger_print> srch = new ArrayList<finger_print>();
+		//ArrayList<finger_print> srch2 = new ArrayList<finger_print>();
+		
 		double low_tr = fp.magnitude * (1 - dis);
 		double high_tr = fp.magnitude / (1 - dis);
 		// System.out.println(low_tr+" "+high_tr);
 
 		int len = vert_splt.size();
-		int low = bin_search(0, len - 1, low_tr);
-		int high = bin_search(0, len - 1, high_tr);
+		int low = bin_search(0, len - 1, low_tr-1);
+		//int high = bin_search(0, len - 1, high_tr+1);
 
-		// System.out.println(low+" "+high);
+		//System.out.println(low+" "+high);
 
 		// for swmaidass paper
-		for (int i = low; i <= high; i++) {
-			if (1 - this.vert_splt.get(i).getSimilarity(fp) < dis) {
+		for (int i = low; i<len; i++) {
+			if(this.vert_splt.get(i).magnitude > high_tr){
+				break;
+			}
+			if (1 - this.vert_splt.get(i).getSimilarity(fp) <= dis) {
 				srch.add(this.vert_splt.get(i));
 			}
+			
 		}
 		//System.out.println(srch.size());
 
+		
+//		for (int i = 0; i < len; i++) {
+//			if (1 - this.vert_splt.get(i).getSimilarity(fp) <= dis) {
+//				srch2.add(this.vert_splt.get(i));
+//			}
+//		}
+//		
+//		if(srch.size()!=srch2.size()){
+//			System.out.println(srch.size() + "  "+srch2.size());
+//		}
+//		
+		
 
 		// System.out.println(lst_fe.size());
 		return srch;

@@ -74,7 +74,7 @@ public class read_file {
 			startTime = System.nanoTime();		
 			for(int i=1;i<=test_set.size();i++){
 				finger_print f = test_set.get(i-1);
-				idx.create_splits(f);
+				//idx.create_splits(f);
 				ArrayList<finger_print> search = idx.range_search(f,dis);			
 			}
 			

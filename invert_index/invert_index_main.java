@@ -31,7 +31,7 @@ public class invert_index_main {
 		int count = 0;
 		int inn = 0;
 		
-		//
+		 
 		double startTime = System.nanoTime();
 		
 		while ((line = br.readLine()) != null) {
@@ -52,16 +52,19 @@ public class invert_index_main {
 
 		/**** improved */
 
-		 /*for(int i: finger_print.invert_index.keySet()){
+		 
+		//Please comment after done
+		
+		for(int i: finger_print.invert_index.keySet()){
 			 finger_print.f_sort.add(i);
 		 }
 		 Collections.sort(finger_print.f_sort, finger_print.comp); // uncomment fsort
 
 		 
 		 
-		 int p=finger_print.invert_index.get(finger_print.f_sort.get(0)).keySet().size();
+		 //int p=finger_print.invert_index.get(finger_print.f_sort.get(0)).keySet().size();
 		 for(int i=0;i<10;i++){
-			 //System.out.println(finger_print.invert_index.get(finger_print.f_sort.get(i)).keySet().size());				
+			/* //System.out.println(finger_print.invert_index.get(finger_print.f_sort.get(i)).keySet().size());				
 			 ArrayList<Integer> s= new ArrayList<Integer>();
 			 for(int j: finger_print.invert_index.get(finger_print.f_sort.get(i)).keySet()){
 				 s.add(data.data_set.get(j).feature_size);
@@ -74,8 +77,31 @@ public class invert_index_main {
 				 System.out.print("0 ");
 			 }
 			 System.out.println();
+			*/
+			 int fid=finger_print.f_sort.get(i);
+			 finger_print.map1.put(fid,new HashMap<Integer,Double>());
+			 finger_print.map2.put(fid,new HashMap<Integer,Double>());
+			 
+			 ArrayList<Integer> s= new ArrayList<Integer>();
+			 
+			 for(int j: finger_print.invert_index.get(finger_print.f_sort.get(i)).keySet()){
+				 s.add(data.data_set.get(j).feature_size);
+			 }
+			 Collections.sort(s);
+			 int cutoff=s.get((int)(0.95*s.size()));
+			 finger_print.min_ft_val_2.put(fid,cutoff);
+			 for(int j: finger_print.invert_index.get(finger_print.f_sort.get(i)).keySet()){
+				if(data.data_set.get(j).feature_size <cutoff){
+					finger_print.map1.get(fid).put(j,1.0);
+				}
+				else
+					finger_print.map2.get(fid).put(j,1.0);
+				
+			 }
+			 
+		 
 		 }
-		 */
+		 
 		 
 		/**** non bin ****/
 
@@ -351,7 +377,6 @@ public class invert_index_main {
 		//System.out.println("Candidate point list size "+lst1.size());
 		//System.out.println();
 	}
-
 	private static void improved_range_search_binary(finger_print fp, double dis,
 			Data data) {
 		//System.out.println(fp.id);
@@ -424,6 +449,154 @@ public class invert_index_main {
 							if (!potent.containsKey(id)) {
 								potent.put(id, 1);
 								lst1.add(id);
+							}
+						}
+					}
+				}
+			}
+		}
+		//System.out.println("percent pruned "+1.0*f/fp.feat_present.size());
+		//System.out.println("Features pruned "+feat_count);
+		//System.out.println("rehected no of feats " + f);
+		for (int i = 0; i < lst1.size(); i++) {
+			int j = lst1.get(i);
+			if (fp.getDistance(data.data_set.get(j)) < dis) {
+				lst2.add(j);
+				//System.out.print(" "+ fp.getDistance(data.data_set.get(lst1.get(i))));
+				// System.out.println("Point "+j);
+			}
+		}
+		
+//		if(lst2.size()!=s){
+//			System.out.println("NNNNNNNNNNNNNNNNNNNOOOOOOOOOOOOOOOO");
+//		}
+		
+		//System.out.println(lst2);
+		//System.out.println("Candidate point list size "+lst1.size());
+		//System.out.println();
+	}
+	
+	private static void improved_range_search_binary_v2(finger_print fp, double dis,
+			Data data) {
+		//System.out.println(fp.id);
+		ArrayList<Integer> lst1 = new ArrayList<Integer>();
+		HashMap<Integer, Integer> potent = new HashMap<Integer, Integer>();
+		ArrayList<Integer> lst2 = new ArrayList<Integer>();
+
+		// to be commented
+//		for (int i : data.data_set.keySet()) {
+//			if (fp.getDistance(data.data_set.get(i)) < dis) {
+//				lst2.add(i);
+//				//System.out.print(" " + fp.getDistance(data.data_set.get(i)));
+//			}
+//		}
+//		System.out.println(lst2);
+//		int s=lst2.size();
+//		lst2.clear();
+		
+		int q_feat = fp.feature_size;
+
+		/** binary **/
+
+		int feat_count = 0;
+		double min_fts = 0;
+
+		boolean add = true;
+		boolean split = true;
+		
+		int f = 0;
+		
+		int gen=0;
+		
+		Collections.sort(fp.feat_present, finger_print.comp); // uncomment fsort
+
+		//System.out.println();
+		for (Integer fid : fp.feat_present) {
+			add = true;
+			split=false;
+			if (finger_print.mn_ft_allpts_infeat.containsKey(fid)) {
+				//System.out.println("No fo0 points in feature "+fid+" "+finger_print.invert_index.get(fid).keySet().size()* finger_print.mn_ft_allpts_infeat.get(fid));
+
+				
+				double temp = 0, max_sim = 0,max_sim2=0,min_sim=0;
+
+				/** binary **/
+				temp = Math.min(min_fts, finger_print.mn_ft_allpts_infeat.get(fid));
+				max_sim = (feat_count + 1.0) / (q_feat - (1 + feat_count) + temp);
+				
+				
+				min_sim = 1.0 / (q_feat - 1  + finger_print.mx_ft_allpts_infeat.get(fid));
+				
+				/****/
+								
+				//System.out.println(dis);
+				if (max_sim < 1 - dis) {
+					
+					//System.out.println("Rejected "+fid + " "+finger_print.invert_index.get(fid).containsKey(553)+" feature no "+gen+" "+fp.getDistance(data.data_set.get(553)));
+					
+					//f++;
+					min_fts = temp;
+
+					
+					// System.out.println(( feat_neglect.size()+1.0) / (q_feat
+					// -1 - feat_neglect.size() + Math.max(max,
+					// finger_print.mn_ft_allpts_infeat.get(fid))));
+					
+					add = false;
+					//System.out.println("Feature no : "+ fid+ );
+					feat_count++;
+				}
+				else if(min_sim > 1-dis){
+					//System.out.println("Used Max Sim");
+					
+					add=false;
+					
+					if (finger_print.invert_index.containsKey(fid)) {
+						for (Integer id : finger_print.invert_index.get(fid)
+								.keySet()) {
+							if (!potent.containsKey(id)) {
+								potent.put(id, 1);
+								lst2.add(id);
+							}
+						}
+					}
+				}
+				else if(finger_print.map1.containsKey(fid)){
+					temp = Math.min(min_fts, finger_print.min_ft_val_2.get(fid));
+					max_sim2=(feat_count + 1.0) / (q_feat - (1 + feat_count) + finger_print.min_ft_val_2.get(fid));
+					
+					if (max_sim2 < 1 - dis) {
+						min_fts = temp;
+						add=false;
+						split=true;
+						//System.out.println("Split here");
+					}
+					
+				}
+				
+				
+
+				
+				
+				if (add) {
+
+					if (finger_print.invert_index.containsKey(fid)) {
+						if(!split){
+						for (Integer id : finger_print.invert_index.get(fid)
+								.keySet()) {
+							if (!potent.containsKey(id)) {
+								potent.put(id, 1);
+								lst1.add(id);
+							}
+						}
+						}
+						else{
+							for (Integer id : finger_print.map1.get(fid)
+									.keySet()) {
+								if (!potent.containsKey(id)) {
+									potent.put(id, 1);
+									lst1.add(id);
+								}
 							}
 						}
 					}
